@@ -9,22 +9,20 @@ import { PublicFooterComponent } from './public-footer/public-footer.component';
 
 @NgModule({
   declarations: [
-    PrivateHeaderComponent,
     PublicHeaderComponent,
+    PublicFooterComponent,
+    PrivateHeaderComponent,
     PrivateFooterComponent,
-    PublicFooterComponent
   ],
   exports: [
-    PrivateHeaderComponent,
     PublicHeaderComponent,
-    PrivateFooterComponent,
     PublicFooterComponent
   ],
   entryComponents: [
-    PrivateHeaderComponent,
     PublicHeaderComponent,
+    PublicFooterComponent,
+    PrivateHeaderComponent,
     PrivateFooterComponent,
-    PublicFooterComponent
   ],
   imports: [
     CommonModule
