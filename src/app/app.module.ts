@@ -3,13 +3,10 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
-import { HttpClientModule } from '@angular/common/http';
 import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
-import { ApiModule } from './helpers/api.module';
-import { HttpService } from './services/http.service';
 import { CommonComponentModule } from './common/common-component.module';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +17,11 @@ import { CommonComponentModule } from './common/common-component.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
-    HttpClientModule,
-    ApiModule.forRoot('https://www.autorod.com/api'),
     CommonComponentModule,
+    SharedModule,
   ],
   providers: [
-    HttpService
+    
   ],
   bootstrap: [AppComponent],
   schemas: [
