@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MustMatch } from 'src/app/helpers/must-matcher.validator';
+import { MustMatch } from 'src/app/shared/helpers/must-matcher.validator';
 
 @Component({
   selector: 'app-signup',

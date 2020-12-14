@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { API_HOST } from '../helpers/api.module';
+import { API_HOST } from '../../helpers/api.module';
 @Injectable({
   providedIn: 'root'
 })

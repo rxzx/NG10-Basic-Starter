@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MustMatch } from 'src/app/helpers/must-matcher.validator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,12 +12,15 @@ export class LoginComponent implements OnInit {
   public form: FormGroup;
   public submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    public router: Router,
+  ) { }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      email: ['test@gmail.com', [Validators.required, Validators.email]],
+      password: ['test1234', [Validators.required, Validators.minLength(6)]],
     });
   }
 
@@ -34,6 +37,7 @@ export class LoginComponent implements OnInit {
 
     // display form values on success
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.form.value, null, 4));
+    this.router.navigate(["/private/home"]);
   }
 
   onReset() {
